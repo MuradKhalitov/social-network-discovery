@@ -1,13 +1,13 @@
 spring:
   application:
-    name: discovery
+    name: social-network-discovery
   profiles:
     active: native
   cloud:
     config:
       server:
         native:
-          searchLocations: discovery/config/
+          searchLocations: social-network-discovery/config/
 
 eureka:
   dashboard:
@@ -16,6 +16,10 @@ eureka:
   client:
     enabled: true
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+#      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://89.111.174.153:8761/eureka/
+#      defaultZone: http://89.111.174.153:8888/eureka/
+#      defaultZone: 89.111.174.153:8761
 server:
-  port: 8888
+  port: 8761
+#  port: 8888
